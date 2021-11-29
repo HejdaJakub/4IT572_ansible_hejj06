@@ -2,16 +2,16 @@
   hosts: localhost
   connection: local
 
-tasks:
-  - name: Launch EC2 instance
-    ec2:
-      instance_type: t2_micro
-      image: ami-04902260ca3d33422
-      region: us-east-1
-      key_name: devops
-      vpc_subnet_id: subnet-0af17905c8da13153
-      assign_public_id: yes
-      count: 1
-      aws_access_key: "{{access_key}}"
-      aws_secret_key: "{{secret_key}}"
-      security_token: "{{session_key}}"
+  tasks:
+    - name: Launch EC2 instance
+      ec2:
+        instance_type: t2_micro
+        image: ami-04902260ca3d33422
+        region: us-east-1
+        key_name: devops
+        vpc_subnet_id: subnet-0af17905c8da13153
+        assign_public_id: yes
+        count: 1
+        aws_access_key: "{{access_key}}"
+        aws_secret_key: "{{secret_key}}"
+        security_token: "{{session_key}}"
