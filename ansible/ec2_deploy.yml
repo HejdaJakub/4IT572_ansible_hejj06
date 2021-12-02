@@ -16,7 +16,7 @@
         wait: true
         aws_access_key: "{{ access_key }}"
         aws_secret_key: "{{ secret_key }}"
-        security_token: "{{ security_token }}"
+        security_token: "{{ session_token }}"
       register: ec2
 
     - name: Add new instance to host group
